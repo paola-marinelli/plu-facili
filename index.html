@@ -2,6 +2,13 @@
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="PLU facili">
 <title>PLU facili in un click</title>
 <style>
 :root{color-scheme:dark;--bg:#0b0b0d;--card:#17181c;--card2:#202227;--ink:#f2f3f5;--mute:#9aa0aa;--line:#2c2e34;--acc:#ffffff;--acc2:#8fb3ff;--red:#c8102e;--hl:#2a2f3a;--mod:#ffb547;--modbg:#2b2112;--err:#ff6b5e}
@@ -152,7 +159,7 @@ footer{text-align:center;font-size:11px;color:var(--mute);padding:10px 16px 26px
 @media print{.hero,.tabs{display:none}.wrap{overflow:visible}}
 </style></head><body class="nopdv">
 <header class="top"><label for="t-home" class="brand" title="Torna all'inizio"><span class="logo" aria-label="Holdem"><span class="a">Hol</span><span class="b">dem</span></span><span class="app">PLU FACILI IN UN CLICK <span class="forza" aria-hidden="true">&#128170;</span></span></label>
-<small>2852 articoli · export 13/11/2026<br>aggiornato 14/11/2026 12:38</small></header>
+<small>2852 articoli · export 13/11/2026<br>aggiornato 14/11/2026 12:53</small></header>
 <section class="hero">
 <h1>Cerca articolo</h1>
 <p class="sub">Codice fornitore, PLU, codice articolo o descrizione</p>
@@ -3049,7 +3056,7 @@ footer{text-align:center;font-size:11px;color:var(--mute);padding:10px 16px 26px
 </div>
 <footer>Creato dal Business Controller</footer>
 <script>
-var BASE={},VER='202611141238',KEY='cercaplu_tasti',KP='cercaplu_pdv';
+var BASE={},VER='202611141253',KEY='cercaplu_tasti',KP='cercaplu_pdv';
 var R=document.querySelectorAll('tbody tr'),RA={},PDV='',MOD={};
 for(var x=0;x<R.length;x++)RA[R[x].getAttribute('data-a')]=R[x];
 function lg(k){try{return localStorage.getItem(k)}catch(e){return null}}
@@ -3148,5 +3155,10 @@ function scheda(t,n){
 (function(){var p=lg(KP)||'',rs=document.querySelectorAll('input[name=p]'),v='';
  for(var i=0;i<rs.length;i++)if(rs[i].value===p){rs[i].checked=true;v=p}
  setPdv(v)})();
+</script>
+<script>
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'||location.hostname==='127.0.0.1')){
+ window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})});
+}
 </script>
 </body></html>
